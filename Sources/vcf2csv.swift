@@ -11,6 +11,8 @@ import UniformTypeIdentifiers
 
 @main
 struct vcf2csv: ParsableCommand {
+    static let configuration = CommandConfiguration(usage: "vcf2csv <input.vcf> <output.csv>")
+    
     @Argument(
         help: "CSVに変換したいvCardファイルを指定してください。",
         transform: { arg in
